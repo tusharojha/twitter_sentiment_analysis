@@ -1,9 +1,9 @@
 # Twitter Sentiment Analysis
 ## Installing
 Install the following dependencies:
-1). matplotlib
-2). textblob
-3). tweepy
+- matplotlib: To Plot pie chart & visualize the sentiments of people
+- textblob: To get the sentiments from texts
+- tweepy: To get tweets from twitter related to a search term
 
 ## Get Developer Account on Twitter
 Create a developer account on twitter and then create an app on twitter to get apis for fetching real time tweets.
