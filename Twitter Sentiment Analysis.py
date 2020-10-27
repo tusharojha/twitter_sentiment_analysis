@@ -25,19 +25,23 @@ with open('persons.csv', 'w', newline='') as csvfile:
         total = total+1
         polarity = 'neutral'
         #print('Tweet: ' + tweet.text)
+        subjectivity = 'Not very subjective'
+        #print('Tweet: ' + tweet.text)
         analysis = TextBlob(tweet.text)
         #print(analysis.sentiment)
+        if(analysis.sentiment.subjectivity > 0.5):
+          subjectivity = 'fairly subjective'
         if(analysis.sentiment.polarity > 0.2):
           polarity='positive'
           positive = positive +1
-        if(analysis.sentiment.polarity < -0.2):
+        else if(analysis.sentiment.polarity < -0.2):
           polarity= 'negative'
           negative = negative +1
-        if(analysis.sentiment.polarity <0.2):
-          if(analysis.sentiment.polarity > -0.2):
+        else if(-0.2<analysis.sentiment.polarity <0.2):
             neutral = neutral +1
         #print(polarity)
-        filewriter.writerow([polarity, analysis.sentiment.polarity, tweet.text])
+
+        filewriter.writerow([polarity, analysis.sentiment.polarity, subjectivity, anlysis.sentiment.subjectivity, tweet.text])
 print("Total Results ", total)
 
 cols = ['r', 'g', 'c']
