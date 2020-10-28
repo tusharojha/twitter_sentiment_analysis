@@ -1,7 +1,7 @@
 # Twitter Sentiment Analysis
 ## Installing
 Install the following dependencies:
-- matplotlib: To Plot pie chart & visualize the sentiments of people
+- matplotlib & seaborn: To Plot pie chart & bar chart for visualizing the sentiments of people
 - textblob: To get the sentiments from texts
 - tweepy: To get tweets from twitter related to a search term
 
